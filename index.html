@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <link rel="icon" href="photo/p.jpg">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <meta charset="UTF-8" />
+    <script src="INDEX.JS"></script>
+    <title>puhrum</title>
+    <!-- مهم جدًا للـ Responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+
+
+<body>
+    <!-- الهيدر المُصحح -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+              <h1>puhrum</h1>
+            </div>
+            <nav class="nav">
+                <!-- Desktop Menu -->
+                <div class="nav-desktop">
+                    <a href="#art" class="nav-link active">ترفيه</a>
+                    <a href="#art" class="nav-link">ثقافة</a>
+                    <a href="#art" class="nav-link">احداث جامعية</a>
+                    <a href="#art" class="nav-link">العلوم والتكنولوجيا</a>
+                    <a href="#art" class="nav-link">وجهات واراء </a>
+                </div>
+                
+                <!-- Hamburger Button - النسخة السومرية -->
+<div class="hamburger" id="hamburgerBtn">
+    <span></span>
+    <span></span>
+    <span></span>
+    <div class="cuneiform-icon">𒀀</div> <!-- حرف سومري أسطوري -->
+</div>
+                
+<!-- Mobile Menu السومري -->
+<div class="mobile-menu" id="mobileMenu">
+    <a href="home.html" class="nav-link">
+        <i class="fas fa-home"></i>
+        <span>الرئيسية</span>
+    </a>
+    <a href="#art" class="nav-link" >
+        <i class="fas fa-book-open"></i>
+        <span>ثقافة</span>
+    </a>
+    <a href="#art" class="nav-link">
+        <i class="fas fa-graduation-cap"></i>
+        <span>أحداث جامعية</span>
+    </a>
+    <a href="#art" class="nav-link">
+        <i class="fas fa-microchip"></i>
+        <span>العلوم والتكنولوجيا</span>
+    </a>
+    <a href="#art" class="nav-link">
+        <i class="fas fa-comments"></i>
+        <span>وجهات وآراء</span>
+    </a>
+</div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- الهوم بيج التعريفي -->
+    <section class="hero">
+        <!-- خلفية سومرية متحركة -->
+<div class="cuneiform-bg">
+    <div class="cuneiform-particle" data-char="𒀀">𒀀</div>
+    <div class="cuneiform-particle" data-char="𒁹">𒁹</div>
+    <div class="cuneiform-particle" data-char="𒂍">𒂍</div>
+    <div class="cuneiform-particle" data-char="𒀭">𒀭</div>
+    <div class="cuneiform-particle" data-char="𒌋">𒌋</div>
+    <div class="cuneiform-particle" data-char="𒆠">𒆠</div>
+</div>
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1>جريدة <span>طلابية</span><br>بصوت مختلف !</h1>
+                <p class="hero-desc">
+                  نهدف الى نقل الحقيقة بمصداقية وتسليط الضوء على  المجتمع.
+                </p>
+         <div class="btns">
+ <a href="#art" class="cta-btn">
+                    <i class="fas fa-newspaper"></i>
+                    مقالات  
+                </a>
+                                <a href="العدد الاول جريدة بيورم.pdf" class="cta-btn" style="color: #fc0000;">
+                    <i class="fa-regular fa-file-lines"></i>
+                     الجريدة
+                </a>
+         </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- الهيدر -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1><a href="">المقالات</a></h1>
+            </div>
+        </div>
+    </header>
+
+    <!-- شريط التصنيف -->
+    <div class="categories-filter" id="categories-filter">
+        <button class="filter-btn active" data-category="all">الكل</button>
+        <button class="filter-btn" data-category="culture">ثقافة</button>
+        <button class="filter-btn" data-category="events">أحداث</button>
+        <button class="filter-btn" data-category="entertainment">ترفيه</button>
+        <button class="filter-btn" data-category="education">تعليم</button>
+        <button class="filter-btn" data-category="interviews">مقابلات</button>
+        <button class="filter-btn" data-category="opinions">آراء</button>
+        <button class="filter-btn" data-category="history">تاريخ</button>
+        <button class="filter-btn" data-category="tecno">تكنلوجيا</button>
+                <button class="filter-btn" data-category="since">علوم</button>
+
+
+    </div>
+
+    <!-- المقالات -->
+    <section class="articles-section" id="art">
+        <div class="articles-grid">
+            
+            <!-- مقال 1 - ثقافة -->
+            <a href="song.html" class="article-card" data-category="culture">
+                <div class="card-image">
+                    <img src="photo/song.png" alt="كيف الهمتنا الطيور">
+                    <span class="category-tag">ثقافة</span>
+                </div>
+                <div class="card-body">
+                    <h3>كيف الهمتنا الطيور لصناعة الموسيقى؟</h3>
+                    <div class="card-meta">
+                        <span><i class="fas fa-user"></i>محمد احمد</span>
+                        <span><i class="fas fa-calendar"></i>2026</span>
+                    </div>
+                </div>
+            </a>
+
+
+
+                <!-- مقال 2 - ثقافة -->
+            <a href="artsdead.html" class="article-card" data-category="culture">
+                <div class="card-image">
+                    <img src="photo/dr.png" alt="">
+                    <span class="category-tag">ثقافة</span>
+                </div>
+                <div class="card-body">
+                <h3>هل ينتظره الموت أم جلس يواسيه؟</h3>
+                    <div class="card-meta">
+                        <span><i class="fas fa-user"></i>زهراء حيدر</span>
+                        <span><i class="fas fa-calendar"></i>2026</span>
+                    </div>
+                </div>
+            </a>
+
+
+            
+            
+
+            <!-- مقال 2 - تاريخ -->
+            <a href="bg.html" class="article-card" data-category="history">
+                <div class="card-image">
+                    <img src="photo/bg.png" alt="سقوط بغداد">
+                    <span class="category-tag">تاريخ</span>
+                </div>
+                <div class="card-body">
+                    <h3>ليلة سقوط بغداد وانتهاء الخلافة العباسية</h3>
+                    <div class="card-meta">
+                        <span><i class="fas fa-user"></i>مريم ياسر</span>
+                        <span><i class="fas fa-calendar"></i>2026</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- مقال 3 - تعليم -->
+            <a href="check.html" class="article-card" data-category="education">
+                <div class="card-image">
+                    <img src="photo/ch.png" alt="المختبرات">
+                    <span class="category-tag">تعليم</span>
+                </div>
+                <div class="card-body">
+                    <h3>شهادات بلا ممارسة؟ نقص المختبرات يهدد كفاءة الخريجين</h3>
+                    <div class="card-meta">
+                        <span><i class="fas fa-user"></i>داليا ليث شفيق</span>
+                        <span><i class="fas fa-calendar"></i>2026</span>
+                    </div>
+                </div>
+            </a>
+
+             <!-- مقال 4 - ترفيه -->
+            <a href="dead poet.html" class="article-card" data-category="entertainment">
+                <div class="card-image">
+                    <i class="fas fa-film"></i>
+                    <span class="category-tag">ترفيه</span>
+                </div>
+                <div class="card-body">
+                    <h3>نحن نحلم بالغد.. لكن الغد لا يأتي</h3>
+                    <div class="card-meta">
+                        <span><i class="fas fa-user"></i>مريم عمار محمد</span>
+                        <span><i class="fas fa-calendar"></i>2026</span>
+                    </div>
+                </div>
+            </a>
+
+                <!-- مقال5 - ترفيه -->
+            <a href="how.html" class="article-card" data-category="entertainment">
+                <div class="card-image">
+                    <i class="fas fa-gamepad"></i>
+                    <span class="category-tag">ترفيه</span>
+                </div>
+                <div class="card-body">
+                    <h3>كيف تصنع التفاصيل الصغيرة سلاماً</h3>
+                    <div class="card-meta">
+                        <span><i class="fas fa-user"></i>فوزي فكري</span>
+                        <span><i class="fas fa-calendar"></i>2026</span>
+                    </div>
+                </div>
+            </a>
+
+
+            <!-- مقال 6 - أحداث -->
+       <a href="uob.html" class="article-card" data-category="events">
+    <div class="card-image">
+        <i class="fas fa-university"></i>
+        <span class="category-tag">أحداث</span>
+    </div>
+    <div class="card-body">
+        <h3>الذكرى الـ 62 لتأسيس الجامعة</h3>
+        <div class="card-meta">
+            <span><i class="fas fa-user"></i>شمس الزهراء صبيح</span>
+            <span><i class="fas fa-calendar"></i>2026</span>
+        </div>
+    </div>
+</a>
+
+            <!-- مقال 7 - آراء -->
+            <a href="s.html" class="article-card" data-category="opinions">
+                <div class="card-image">
+                    <img src="photo/s.png" alt="جيل الصمت">
+                    <span class="category-tag">آراء</span>
+                </div>
+                <div class="card-body">
+                    <h3>بين جيل الصمت وجيل المنصات</h3>
+                    <div class="card-meta">
+                        <span><i class="fas fa-user"></i>داليا ليث شفيق</span>
+                        <span><i class="fas fa-calendar"></i>2026</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- مقال 8 - ترفيه -->
+            <a href="deadl life.html" class="article-card" data-category="entertainment">
+                <div class="card-image">
+                    <img src="photo/Untitled - June 03, 2026 at 21.13.22 (13).png" alt="مكتبة منتصف الليل">
+                    <span class="category-tag">ترفيه</span>
+                </div>
+                <div class="card-body">
+                    <h3>ما بين الحياة والموت مكتبة</h3>
+                    <div class="card-meta">
+                        <span><i class="fas fa-user"></i>بتول حازم مالك</span>
+                        <span><i class="fas fa-calendar"></i>2026</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- مقال 9 - أحداث -->
+                      <a href="plant.html" class="article-card" data-category="events">
+                <div class="card-image">
+                    <i class="fas fa-leaf"></i>
+                    <span class="category-tag">أحداث</span>
+                </div>
+                <div class="card-body">
+                    <h3>موسم زراعة النخيل: شجرة الحياة</h3>
+                    <div class="card-meta">
+                        <span><i class="fas fa-user"></i>مهدي منتظر</span>
+                        <span><i class="fas fa-calendar"></i>2026</span>
+                    </div>
+                </div>
+            </a>
+
+
+            <!-- مقال 10 - أحداث -->
+                     <a href="match.html" class="article-card" data-category="events">
+                <div class="card-image">
+                    <i class="fas fa-futbol"></i>
+                    <span class="category-tag">أحداث</span>
+                </div>
+                <div class="card-body">
+                    <h3>فريق موظفي الجامعة إلى النهائي</h3>
+                    <div class="card-meta">
+                        <span><i class="fas fa-user"></i>ملاك حيدر</span>
+                        <span><i class="fas fa-calendar"></i>2026</span>
+                    </div>
+                </div>
+            </a>
+
+
+            <!-- مقال 11 - آراء -->
+           <a href="uob.html" class="article-card" data-category="opinions">
+    <div class="card-image">
+        <i class="fas fa-brain"></i>
+        <span class="category-tag">آراء</span>
+    </div>
+    <div class="card-body">
+        <h3>عندما يصبح التفوق قولبة للمعرفة</h3>
+        <div class="card-meta">
+            <span><i class="fas fa-user"></i>زهراء عصام</span>
+            <span><i class="fas fa-calendar"></i>2026</span>
+        </div>
+    </div>
+</a>
+
+            <!-- مقال 12 - مقابلات -->
+             <a href="uob.html" class="article-card" data-category="opinions">
+                <div class="card-image">
+                    <i class="fas fa-lightbulb"></i>
+                    <span class="category-tag">آراء</span>
+                </div>
+                <div class="card-body">
+                    <h3>عندما يصبح التفوق قولبة للمعرفة</h3>
+                    <div class="card-meta">
+                        <span><i class="fas fa-user"></i>زهراء عصام</span>
+                        <span><i class="fas fa-calendar"></i>2026</span>
+                    </div>
+                </div>
+            </a>
+
+
+                    <!-- مقال 13 - تكنلوجيا -->
+            <a href="irdoino.html" class="article-card" data-category="tecno">
+                <div class="card-image">
+                    <img src="photo/ird.png" alt="">
+                    <span class="category-tag">تكنلوجيا</span>
+                </div>
+                <div class="card-body">
+                <h3>التأثير السلبي للأردوينو على طلاب الهندسة</h3>
+                    <div class="card-meta">
+                        <span><i class="fas fa-user"></i> حسن سمير</span>
+                        <span><i class="fas fa-calendar"></i>2026</span>
+                    </div>
+                </div>
+            </a>
+
+                    <!-- مقال 14 - علوم -->
+
+                  <a href="mon.html" class="article-card" data-category="since">
+                <div class="card-image">
+                    <img src="photo/mon.png" alt="">
+                    <span class="category-tag">علوم</span>
+                </div>
+                <div class="card-body">
+                <h3>من خطوة على القمر إلى حلم الاستيطان</h3>
+                    <div class="card-meta">
+                        <span><i class="fas fa-user"></i>  يوسف احمد</span>
+                        <span><i class="fas fa-calendar"></i>2026</span>
+                    </div>
+                </div>
+            </a>
+
+
+
+
+
+                        <!-- مقال 14 - علوم -->
+
+                  <a href="short story.html" class="article-card" data-category="entertainment">
+                <div class="card-image">
+                    <img src="photo/sh.png" alt="">
+                    <span class="category-tag">ترفيه</span>
+                </div>
+                <div class="card-body">
+                <h3> قصة قصيرة</h3>
+                    <div class="card-meta">
+                        <span><i class="fas fa-user"></i>   مصطفى حازم</span>
+                        <span><i class="fas fa-calendar"></i>2026</span>
+                    </div>
+                </div>
+            </a>
+
+
+
+
+                              <!-- مقال 15 - مقابلات -->
+
+                  <a href="ktf.html" class="article-card" data-category="interviews">
+                <div class="card-image">
+                    <img src="photo/Untitled - June 03, 2026 at 21.13.22 (9).png" alt="">
+                    <span class="category-tag">مقابلات</span>
+                </div>
+                <div class="card-body">
+                <h3> كتف من ورق</h3>
+                    <div class="card-meta">
+                        <span><i class="fas fa-user"></i>   سارة احمد</span>
+                        <span><i class="fas fa-calendar"></i>2026</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+
+    <!-- JavaScript للتصنيف -->
+    <script>
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                
+                const category = this.getAttribute('data-category');
+                
+                document.querySelectorAll('.article-card').forEach(card => {
+                    if (category === 'all') {
+                        card.classList.remove('hidden');
+                    } else {
+                        if (card.getAttribute('data-category') === category) {
+                            card.classList.remove('hidden');
+                        } else {
+                            card.classList.add('hidden');
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+
+
+
+    <!-- الفوتر -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy;جميع الحقوق محفوظة لبيورم2026  </p>
+        </div>
+    </footer>
+
+    <script src="INDEX.JS"></script>
+</body>
+
+</html>
