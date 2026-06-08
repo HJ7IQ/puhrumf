@@ -1,0 +1,102 @@
+
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>من خطوة على القمر إلى حلم الاستيطان - puhrum</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <style>
+        :root { --primary: #000000; --secondary: #931916; --gray: #64748b; --gray-light: #f1f5f9; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'IBM Plex Sans Arabic', sans-serif; line-height: 1.9; color: #1e293b; background: #f8fafc; }
+        a { text-decoration: none; color: inherit; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        .header { background: rgba(255,255,255,0.98); backdrop-filter: blur(20px); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid rgba(0,0,0,0.06); padding: 1rem 0; }
+        .header .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo h1 a { color: var(--primary); font-weight: 800; font-size: 1.9rem; }
+        .logo h1 a span { color: var(--secondary); }
+        .back-btn { display: inline-flex; align-items: center; gap: 0.6rem; color: var(--secondary); font-weight: 600; padding: 0.7rem 1.6rem; border-radius: 50px; background: rgba(147,25,22,0.08); transition: all 0.3s ease; }
+        .back-btn:hover { background: var(--secondary); color: white; transform: translateY(-2px); box-shadow: 0 8px 25px rgba(147,25,22,0.3); }
+        .article-hero { background: linear-gradient(135deg, var(--primary) 0%, #1a1a1a 100%); padding: 4rem 0; text-align: center; position: relative; overflow: hidden; }
+        .article-hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at 20% 80%, rgba(147,25,22,0.4) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255,255,255,0.05) 0%, transparent 40%); }
+        .article-hero::after { content: ''; position: absolute; top: -40%; right: -15%; width: 500px; height: 500px; border: 1px solid rgba(255,255,255,0.08); border-radius: 50%; animation: float 10s ease-in-out infinite; }
+        @keyframes float { 0%,100% { transform: translate(0,0) rotate(0deg); } 50% { transform: translate(-25px,25px) rotate(8deg); } }
+        .hero-content { position: relative; z-index: 2; }
+        .category-badge { display: inline-block; background: var(--secondary); color: white; padding: 0.5rem 1.5rem; border-radius: 50px; font-size: 0.85rem; font-weight: 600; margin-bottom: 1.5rem; }
+        .hero-content h1 { color: #ffffff; font-size: clamp(1.4rem,5vw,2.4rem); font-weight: 800; margin-bottom: 1.8rem; line-height: 1.4; max-width: 900px; margin-left: auto; margin-right: auto; }
+        .meta { display: flex; justify-content: center; gap: 2.5rem; font-size: 1rem; color: rgba(255,255,255,0.85); flex-wrap: wrap; }
+        .meta-item { display: flex; align-items: center; gap: 0.5rem; }
+        .meta-item i { color: var(--secondary); }
+        .author { font-weight: 600; color: #fff; }
+        .article-content { padding: 4rem 0; }
+        .content-wrapper { background: white; border-radius: 24px; box-shadow: 0 0 0 1px rgba(0,0,0,0.05), 0 25px 50px -12px rgba(0,0,0,0.12); overflow: hidden; }
+        .review-text { padding: 3rem 3rem 1.5rem; font-size: 1.1rem; line-height: 2; color: #334155; text-align: justify; }
+        .review-text p { margin-bottom: 1.4rem; }
+        .quote-box { background: linear-gradient(135deg,#fefbfb,#fef3f3); border-right: 5px solid var(--secondary); padding: 1.5rem 2rem; margin: 1.5rem 3rem; border-radius: 0 16px 16px 0; }
+        .quote-box p { font-style: italic; color: var(--primary); font-size: 1.1rem; line-height: 1.9; }
+        .quote-box .author { font-size: 0.9rem; color: var(--gray); font-style: normal; margin-top: 0.5rem; text-align: left; }
+        .art-image-wrapper { padding: 1.5rem 3rem 2.5rem; text-align: center; }
+        .art-image-wrapper img { max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+        .editor-credit { display: flex; align-items: center; justify-content: center; gap: 0.8rem; padding: 1.5rem; background: var(--gray-light); margin: 2rem 3rem; border-radius: 12px; font-size: 0.95rem; color: var(--gray); }
+        .editor-credit i { color: var(--secondary); }
+        .editor-name { font-weight: 600; color: var(--primary); }
+        .footer { background: var(--primary); color: white; text-align: center; padding: 2.5rem 0; font-weight: 600; }
+        @media (max-width: 768px) { .header .container { flex-direction: column; gap: 1rem; text-align: center; } .hero-content h1 { font-size: 1.3rem; } .meta { flex-direction: column; gap: 0.8rem; } .review-text,.quote-box,.art-image-wrapper,.editor-credit { margin: 1.5rem 1.5rem; padding: 1.5rem; } }
+    </style>
+  </head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo"><h1><a href="home.html">puhrum</a></h1></div>
+            <a href="home.html" class="back-btn"><i class="fas fa-arrow-left"></i> العودة للرئيسية</a>
+        </div>
+    </header>
+    <section class="article-hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="category-badge"><i class="fas fa-rocket"></i> علوم</span>
+                <h1>من خطوة على القمر إلى حلم الاستيطان</h1>
+                <div class="meta">
+                    <div class="meta-item"><i class="fas fa-user"></i><span class="author">يوسف احمد حسن</span></div>
+                    <div class="meta-item"><i class="fas fa-calendar"></i><span>2026</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <main class="article-content">
+        <div class="container"><div class="content-wrapper">
+            <div class="review-text">
+                <p>منذ أن رفع الإنسان عينيه نحو السماء، لم يكن الفضاء مجرد فراغ مظلم، بل كان سؤالًا مفتوحًا: هل يمكن الوصول إليه؟ ومع تقدم العلم في القرن العشرين، تحوّل هذا السؤال إلى سلسلة من التحديات: هل نستطيع الوصول؟ هل نستطيع البقاء؟ وهل سنتمكن يومًا من العيش خارج الأرض؟ وبين برامج أبولو ومحطات الفضاء وصولًا إلى أرتيمس، تتشكل أمامنا قصة متكاملة لا تمثل مجرد إنجازات متفرقة، بل مسارًا علميًا متدرجًا نقل الإنسان من كوكب الأرض إلى حدود الفضاء، وربما قريبًا إلى ما هو أبعد من ذلك. وبينما يرى البعض أن هذه الرحلات، خصوصًا الهبوط على القمر، لم تكن سوى "مسرحية"، فإن هذا التسلسل المنطقي من التطور يكشف واقعًا مختلفًا تمامًا، واقعًا مليئًا بالأخطاء والتجارب والتقدم التدريجي الذي لا يمكن تزويره بسهولة.</p>
+                <p>في عام 1957، أطلق الاتحاد السوفيتي القمر الصناعي Sputnik 1 ليصبح أول جسم من صنع الإنسان يدور حول الأرض، في لحظة غيّرت نظرة العالم بالكامل. لم يعد الفضاء خيالًا، بل هدفًا يمكن الوصول إليه، لكن قبل وصول الإنسان نفسه، أُرسلت كائنات حية لاختبار هذه البيئة القاسية، وكان من أشهرها الكلبة Laika التي أُطلقت إلى الفضاء على متن Sputnik 2، لتكون أول كائن حي يدور حول الأرض. وردًا على هذا التحدي، أنشأت الولايات المتحدة وكالة NASA عام 1958 بقرار من الرئيس Dwight D. Eisenhower، لتبدأ مرحلة جديدة من سباق الفضاء.</p>
+                <p>استمرت المنافسة بين القوتين العظميين، ومع كل إنجاز سوفيتي كان الضغط يزداد على الولايات المتحدة لاتخاذ خطوة حاسمة، ولم يعد الأمر مجرد تفوق علمي بل مسألة هيبة سياسية. في هذا السياق، أعلن الرئيس John F. Kennedy التحدي الأكبر في تاريخ استكشاف الفضاء قائلاً: "We choose to go to the moon not because it is easy, but because it is hard"، لتصبح هذه الكلمات بداية فعلية لمشروع سيغيّر مسار البشرية.</p>
+                <p>وبعد ذلك بعام، وتحديدًا في 1961، أصبح Yuri Gagarin أول إنسان يدور حول الأرض، وقد وصف الأرض من الفضاء بأنها "زرقاء، صغيرة، وهشة"، في أول إدراك إنساني لحقيقة كوكبنا من الخارج. ثم في عام 1963 أصبحت Valentina Tereshkova أول امرأة تصعد إلى الفضاء، ما أكد أن استكشاف الفضاء أصبح إنجازًا إنسانيًا شاملًا.</p>
+                <p>بدأ الطريق إلى القمر عبر برامج تمهيدية مثل Gemini، وصولًا إلى برنامج Apollo الذي انطلقت أولى رحلاته عام 1967 بمهمة أبولو 1، لكنها انتهت بكارثة بعد اندلاع حريق داخل المركبة أدى إلى وفاة الطاقم. هذا الحدث لم يكن مجرد فشل، بل نقطة تحول أعادت تشكيل البرنامج بالكامل، حيث تم تحسين أنظمة الأمان بشكل جذري، كما تقرر إلغاء تسميات أبولو 2 وأبولو 3 احترامًا للضحايا، والانتقال مباشرة إلى الرحلات اللاحقة.</p>
+                <p>في عام 1968، جاءت أبولو 7 كأول رحلة مأهولة ناجحة، ثم أبولو 8 التي غادرت مدار الأرض ودارت حول القمر، مانحة البشرية أول رؤية لكوكبها من الفضاء العميق. بعد ذلك، لعبت أبولو 9 دورًا حاسمًا، إذ كانت أول اختبار فعلي للمركبة القمرية في مدار الأرض، حيث تم فصلها عن المركبة الأم وإعادة التحامها بنجاح، وهو اختبار أساسي قبل أي هبوط. أما أبولو 10، فكانت بروفة شبه كاملة للهبوط، إذ اقتربت المركبة القمرية من سطح القمر لمسافة تقارب 15 كيلومترًا، دون تنفيذ الهبوط الفعلي، لكنها أثبتت جاهزية كل الأنظمة.</p>
+            </div>
+            <div class="quote-box">
+                <p>"هذه خطوة صغيرة لأنسان، وقفزة عظيمة للبشرية"</p>
+                <p class="author">— نيل أرمسترونغ</p>
+            </div>
+            <div class="review-text">
+                <p>وفي عام 1969، تحقّق الحلم مع مهمة Apollo 11 Moon Landing، حيث هبط الإنسان لأول مرة على سطح القمر بقيادة Neil Armstrong ومعه Buzz Aldrin، بينما بقي Michael Collins في المدار. كانت المهمة مليئة بالمخاطر، حيث اضطر الطاقم للهبوط اليدوي مع اقتراب نفاد الوقود، لكنها انتهت بنجاح تاريخي غيّر مفهوم البشرية عن حدودها.</p>
+                <p>لاحقًا، تحولت أبولو 13 إلى واحدة من أعظم قصص النجاة في التاريخ بعد انفجار خزان الأوكسجين داخل المركبة، ما أدى إلى فقدان الطاقة وتعطل الأنظمة الحيوية. عندها تغيّر الهدف من الهبوط إلى النجاة، واستخدم الطاقم المركبة القمرية كوسيلة إنقاذ، بينما ابتكر المهندسون حلولًا عاجلة باستخدام أدوات بسيطة لإصلاح أنظمة الحياة. ورغم الخطر الشديد، عاد الرواد إلى الأرض سالمين، لتصبح المهمة مثالًا على أن الفشل في الفضاء قد يتحول إلى أعظم إنجازات الإنسان.</p>
+                <p>بعد انتهاء برنامج أبولو، ونجاح جميع رحلاتها ما عدى أبولو 13 لم ينتهِ الحلم، بل تغيّر الهدف من الوصول إلى القمر إلى البقاء في الفضاء. بدأت هذه المرحلة بمحطات Salyut، ثم تطورت مع محطة Mir space station التي كانت أول تجربة حقيقية للعيش الطويل في الفضاء، حيث واجه الرواد مشاكل انعدام الجاذبية، وضعف العضلات، والعزلة، إضافة إلى الأعطال المستمرة. هذه التجارب مهدت لإنشاء International Space Station التي أصبحت أكبر مختبر فضائي في التاريخ ورمزًا للتعاون الدولي في استكشاف الفضاء، حيث تُجرى فيها تجارب علمية متقدمة لدراسة تأثير الفضاء على الإنسان. كمادخلت الصين هذا المجال عبر محطة Tiangong space station التي تمثل جيلًا جديدًا من المحطات المستقلة.</p>
+                <p>اليوم، ومع تطور التكنولوجيا، بدأت مرحلة جديدة من خلال برنامج أرتيمس الذي تقوده NASA، والذي يهدف إلى العودة إلى القمر ولكن هذه المرة للبقاء فيه. فقد أظهرت الدراسات وجود جليد في القطب الجنوبي للقمر يمكن استخدامه لإنتاج الماء والوقود، ما يجعل القمر محطة انطلاق نحو المريخ.</p>
+                <p>ضمن هذا البرنامج، جاءت مهمة Artemis II mission في شهر نيسان من هذا العام كأول رحلة مأهولة في الجيل الجديد من الاستكشاف، حيث لم تهبط على القمر بل دارت حوله لاختبار مركبة Orion spacecraft وصاروخ Space Launch System وأنظمة الحياة في بيئة فضائية بعيدة جدًا عن الأرض. هذه المهمة تمثل الانتقال من مرحلة إثبات "إمكانية الوصول" في أبولو، إلى مرحلة إثبات "إمكانية العودة والاستمرار" في أرتيمس، وهي خطوة أساسية قبل إرسال البشر إلى سطح القمر ثم إلى المريخ.</p>
+                <p>وهكذا، لم تكن رحلة الإنسان إلى الفضاء قفزة واحدة، بل سلسلة من الخطوات المدروسة؛ من سبوتنيك الذي أعلن بداية الحلم، إلى أبولو الذي أثبت إمكانية الوصول، إلى محطات الفضاء التي أثبتت إمكانية البقاء، وصولًا إلى أرتيمس الذي يسعى لبناء مستقبل خارج الأرض. وبين كل هذه المراحل، يتغير السؤال الذي نطرحه: لم يعد "هل نستطيع الوصول؟"، بل أصبح "هل سنعيش هناك يومًا ما؟". والإجابة، كما يبدو اليوم، لم تعد خيالًا… بل مشروعًا قيد التنفيذ.</p>
+            </div>
+            <div class="art-image-wrapper">
+                <img src="photo/mon.png" alt="Space Exploration">
+            </div>
+            <div class="editor-credit">
+                <i class="fas fa-check-circle"></i>
+                <span>تدقيق:</span>
+                <span class="editor-name">دانة حسام</span>
+            </div>
+        </div></div>
+    </main>
+    <footer class="footer"><div class="container"><p>جميع الحقوق محفوظة لبيورم 2026</p></div></footer>
+</body>
+</html>

@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>تحليل لوحة الرسام الذي يحتضر - puhrum</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <style>
+        :root {
+            --primary: #000000;
+            --secondary: #931916;
+            --gray: #64748b;
+            --gray-light: #f1f5f9;
+            --white: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'IBM Plex Sans Arabic', sans-serif;
+            line-height: 1.9;
+            color: #1e293b;
+            background: #f8fafc;
+        }
+
+        a { text-decoration: none; color: inherit; }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+        .header {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(20px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+            padding: 1rem 0;
+        }
+
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo h1 a {
+            color: var(--primary);
+            font-weight: 800;
+            font-size: 1.9rem;
+        }
+
+        .logo h1 a span { color: var(--secondary); }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            color: var(--secondary);
+            font-weight: 600;
+            padding: 0.7rem 1.6rem;
+            border-radius: 50px;
+            background: rgba(147, 25, 22, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background: var(--secondary);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(147, 25, 22, 0.3);
+        }
+
+        .article-hero {
+            background: linear-gradient(135deg, var(--primary) 0%, #1a1a1a 100%);
+            padding: 4rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .article-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 80%, rgba(147, 25, 22, 0.4) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 40%);
+        }
+
+        .article-hero::after {
+            content: '';
+            position: absolute;
+            top: -40%;
+            right: -15%;
+            width: 500px;
+            height: 500px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 50%;
+            animation: float 10s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            50% { transform: translate(-25px, 25px) rotate(8deg); }
+        }
+
+        .hero-content { position: relative; z-index: 2; }
+
+        .category-badge {
+            display: inline-block;
+            background: var(--secondary);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-content h1 {
+            color: #ffffff;
+            font-size: clamp(1.8rem, 5vw, 2.8rem);
+            font-weight: 800;
+            margin-bottom: 1.8rem;
+            line-height: 1.4;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .meta {
+            display: flex;
+            justify-content: center;
+            gap: 2.5rem;
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.85);
+            flex-wrap: wrap;
+        }
+
+        .meta-item { display: flex; align-items: center; gap: 0.5rem; }
+        .meta-item i { color: var(--secondary); }
+        .author { font-weight: 600; color: #fff; }
+
+        .article-content { padding: 4rem 0; }
+
+        .content-wrapper {
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05), 0 25px 50px -12px rgba(0, 0, 0, 0.12);
+            overflow: hidden;
+        }
+
+        .review-text {
+            padding: 3rem 3rem 1.5rem;
+            font-size: 1.1rem;
+            line-height: 2;
+            color: #334155;
+            text-align: justify;
+        }
+
+        .review-text p { margin-bottom: 1.4rem; }
+        .review-text p:last-child { margin-bottom: 0; }
+
+        .art-section-title {
+            margin: 2.5rem 3rem 1rem;
+            position: relative;
+            display: inline-block;
+            padding-right: 2rem;
+        }
+
+        .art-section-title::before {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 6px;
+            height: 70%;
+            background: var(--secondary);
+            border-radius: 2px;
+        }
+
+        .art-section-title h2 {
+            color: var(--primary);
+            font-size: 1.4rem;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            display: inline-block;
+        }
+
+        .quote-box {
+            background: linear-gradient(135deg, #fefbfb 0%, #fef3f3 100%);
+            border-right: 5px solid var(--secondary);
+            padding: 1.5rem 2rem;
+            margin: 1.5rem 3rem;
+            border-radius: 0 16px 16px 0;
+        }
+
+        .quote-box p {
+            font-size: 1.1rem;
+            font-style: italic;
+            color: var(--primary);
+            line-height: 1.9;
+        }
+
+        .quote-box .source {
+            font-size: 0.9rem;
+            color: var(--gray);
+            margin-top: 0.8rem;
+        }
+
+        .art-image-wrapper {
+            padding: 1.5rem 3rem 2.5rem;
+        }
+
+        .art-image-wrapper img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .editor-credit {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.8rem;
+            padding: 1.5rem;
+            background: var(--gray-light);
+            margin: 2rem 3rem;
+            border-radius: 12px;
+            font-size: 0.95rem;
+            color: var(--gray);
+        }
+
+        .editor-credit i { color: var(--secondary); }
+        .editor-name { font-weight: 600; color: var(--primary); }
+
+        .footer {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 2.5rem 0;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .header .container {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+
+            .hero-content h1 { font-size: 1.5rem; }
+            .meta { flex-direction: column; gap: 0.8rem; }
+            
+            .review-text, .quote-box, .art-section-title, .art-image-wrapper, .editor-credit { margin: 1.5rem 1.5rem; padding: 1.5rem; }
+        }
+    </style>
+  </head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo"><h1><a href="#home">puhrum</a></h1></div>
+            <a href="home.html" class="back-btn"><i class="fas fa-arrow-left"></i> العودة للرئيسية</a>
+        </div>
+    </header>
+
+    <section class="article-hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="category-badge"><i class="fas fa-palette"></i> ثقافة</span>
+                <h1>هل ينتظره الموت أم جلس يواسيه؟</h1>
+                <div class="meta">
+                    <div class="meta-item"><i class="fas fa-user"></i><span class="author">زهراء حيدر</span></div>
+                    <div class="meta-item"><i class="fas fa-calendar"></i><span>2026</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="article-content">
+        <div class="container"><div class="content-wrapper">
+            <div class="review-text">
+                <p>"هل ينتظره الموت أم جلس يواسيه"؛ هو سؤال صوّره الرسام البولندي زيجمونت أندريجويكز (Zygmunt Andrychiewicz) في لوحته "موت الفنان: صديقه الأخير"، (The Artist's Death: His Last Friend)، التي رُسمت عام 1901.</p>
+                <p>تُظهر هذه اللوحة غرفة تكاد تكون مرسمًا صغيرًا موحشًا، بنافذة في السقف لا يمرّ منها ضوء الشمس بشكل واضح، دلالةً على ضبابية الأجواء وظلمتها الكئيبة. على يسارها استقر سرير الفنان الشاب المريض المحتضر، وإلى جانبه أوعية الدواء الفارغة وكتب وأوراق متروكة تحت السرير. ويبدو أنه كان يصارع المرض لفترة طويلة، يتجلى هذا في بعثرة أدوات الرسم على أرضية الغرفة ولوحته غير المكتملة في الجهة المعاكسة للناظر. الضوء الصغير بالقرب من رأسه يجسد روحًا شفافة عذبة يحوم حولها الموت.</p>
+                <p>يظهر في اللوحة تجسيدٌ للموت يجلس بهدوء وعناية أمام الفنان، مرتديًا بدلة رسمية، ويعزف الكمان كأنه اللحن الأخير الموجع. هل جلوسه يدل على انتظاره لسلب روحٍ أخرى أم للقاء صاحبٍ عزيز طالما انتظره؟ هل حقًا سلبه الموت أم قرر الفنان أن ينهي حياته بنفسه؟</p>
+                <p>تعكس اللوحة جوًا كئيبًا مظلمًا وموحشًا، يمزج بين واقعٍ لا بد من حصوله وخيالٍ إبداعي عميق، تخليدًا للفنان. مما يظهر سخرية القدر، حيث اشتهر الفنان خلال حياته، التي طالت اثنين وثمانين عامًا، برسم المناظر الطبيعية الواقعية والصور الشخصية، بعد أن تلقى تدريبه الفني في "مدرسة وارسو للرسم"، حيث أنشأ استوديو لمتابعة مسيرته الفنية بعد عودته من باريس.</p>
+            </div>
+
+            <div class="art-section-title"><h2>موت الحقيقة والصداقة</h2></div>
+
+            <div class="review-text">
+                <p>أراد الفنان البولندي إيصال جانبين متضادين للموت؛ فهو الحقيقة المطلقة لهذا الوجود، الملازم لكل مخلوق، حيث لا حياة بدون الموت. هو تلك الفكرة التي تقشعر لها أبدان المخلوقات، كما يقول أحد الكتّاب: "ذلك المخلوق المرعب الذي ترتعد الفرائص عند ذكره، مخلوق غامض… إذا شعر الفيل بدنو أجله فإنه يهجر القطيع إلى مكان بعيد ليلقى حتفه هناك".</p>
+                <p>وفي الوقت ذاته، هو الصديق الأخير والأقرب للإنسان عند احتضاره، فلو اجتمع كل أهل الإنسان وأصدقائه لن يكونوا أقرب إليه من الموت. يبدو أن الموت جاء لهذا الفنان مرتديًا بدلته، يعزف على أرقّ أنواع الآلات، كرمز للحزن المصاحب لنهاية الحياة، مواجِهًا له ومترقّبًا، كأنه يحرص على موته بسلام وأمان.</p>
+                <p>استخدم الرسام الألوان الداكنة للدلالة على الظلام والحزن والوحشة المهيمنة على أجواء المرسم، مع تسليط الضوء على الفنان المحتضر تعبيرًا عن روحه الصاعدة إلى السماء وتقبّله للواقع. رُسمت اللوحة بالألوان الزيتية، وهي معروضة الآن في "مجموعة المتحف الوطني" في "وارسو".</p>
+            </div>
+
+            <div class="art-image-wrapper">
+                <img src="photo/dr.png" alt="The Artist's Death: His Last Friend">
+            </div>
+
+            <div class="editor-credit">
+                <i class="fas fa-check-circle"></i>
+                <span>تدقيق:</span>
+                <span class="editor-name">دانة حسام</span>
+            </div>
+        </div></div>
+    </main>
+
+    <footer class="footer"><div class="container"><p>جميع الحقوق محفوظة لبيورم 2026</p></div></footer>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>نحن نحلم بالغد - puhrum</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all-min.css">
+    <style>
+        :root { --primary: #000000; --secondary: #931916; --gray: #64748b; --gray-light: #f1f5f9; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'IBM Plex Sans Arabic', sans-serif; line-height: 1.9; color: #1e293b; background: #f8fafc; }
+        a { text-decoration: none; color: inherit; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        .header { background: rgba(255,255,255,0.98); backdrop-filter: blur(20px); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid rgba(0,0,0,0.06); padding: 1rem 0; }
+        .header .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo h1 a { color: var(--primary); font-weight: 800; font-size: 1.9rem; }
+        .logo h1 a span { color: var(--secondary); }
+        .back-btn { display: inline-flex; align-items: center; gap: 0.6rem; color: var(--secondary); font-weight: 600; padding: 0.7rem 1.6rem; border-radius: 50px; background: rgba(147,25,22,0.08); transition: all 0.3s ease; }
+        .back-btn:hover { background: var(--secondary); color: white; transform: translateY(-2px); box-shadow: 0 8px 25px rgba(147,25,22,0.3); }
+        .article-hero { background: linear-gradient(135deg, var(--primary) 0%, #1a1a1a 100%); padding: 4rem 0; text-align: center; position: relative; overflow: hidden; }
+        .article-hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at 20% 80%, rgba(147,25,22,0.4) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255,255,255,0.05) 0%, transparent 40%); }
+        .article-hero::after { content: ''; position: absolute; top: -40%; right: -15%; width: 500px; height: 500px; border: 1px solid rgba(255,255,255,0.08); border-radius: 50%; animation: float 10s ease-in-out infinite; }
+        @keyframes float { 0%,100% { transform: translate(0,0) rotate(0deg); } 50% { transform: translate(-25px,25px) rotate(8deg); } }
+        .hero-content { position: relative; z-index: 2; }
+        .category-badge { display: inline-block; background: var(--secondary); color: white; padding: 0.5rem 1.5rem; border-radius: 50px; font-size: 0.85rem; font-weight: 600; margin-bottom: 1.5rem; }
+        .hero-content h1 { color: #ffffff; font-size: clamp(1.4rem,5vw,2.4rem); font-weight: 800; margin-bottom: 1.8rem; line-height: 1.4; max-width: 900px; margin-left: auto; margin-right: auto; }
+        .meta { display: flex; justify-content: center; gap: 2.5rem; font-size: 1rem; color: rgba(255,255,255,0.85); flex-wrap: wrap; }
+        .meta-item { display: flex; align-items: center; gap: 0.5rem; }
+        .meta-item i { color: var(--secondary); }
+        .author { font-weight: 600; color: #fff; }
+        .article-content { padding: 4rem 0; }
+        .content-wrapper { background: white; border-radius: 24px; box-shadow: 0 0 0 1px rgba(0,0,0,0.05), 0 25px 50px -12px rgba(0,0,0,0.12); overflow: hidden; }
+        .review-text { padding: 3rem 3rem 1.5rem; font-size: 1.1rem; line-height: 2; color: #334155; text-align: justify; }
+        .review-text p { margin-bottom: 1.4rem; }
+        .quote-box { background: linear-gradient(135deg,#fefbfb,#fef3f3); border-right: 5px solid var(--secondary); padding: 1.5rem 2rem; margin: 1.5rem 3rem; border-radius: 0 16px 16px 0; }
+        .quote-box p { font-style: italic; color: var(--primary); font-size: 1.1rem; line-height: 1.9; }
+        .art-image-wrapper { padding: 1.5rem 3rem 2.5rem; text-align: center; }
+        .art-image-wrapper img { max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+        .editor-credit { display: flex; align-items: center; justify-content: center; gap: 0.8rem; padding: 1.5rem; background: var(--gray-light); margin: 2rem 3rem; border-radius: 12px; font-size: 0.95rem; color: var(--gray); }
+        .editor-credit i { color: var(--secondary); }
+        .editor-name { font-weight: 600; color: var(--primary); }
+        .footer { background: var(--primary); color: white; text-align: center; padding: 2.5rem 0; font-weight: 600; }
+        @media (max-width: 768px) { .header .container { flex-direction: column; gap: 1rem; text-align: center; } .hero-content h1 { font-size: 1.3rem; } .meta { flex-direction: column; gap: 0.8rem; } .review-text,.quote-box,.art-image-wrapper,.editor-credit { margin: 1.5rem 1.5rem; padding: 1.5rem; } }
+    </style>
+  </head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo"><h1><a href="home.html">puhrum</a></h1></div>
+            <a href="home.html" class="back-btn"><i class="fas fa-arrow-left"></i> العودة للرئيسية</a>
+        </div>
+    </header>
+    <section class="article-hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="category-badge"><i class="fas fa-film"></i> ترفيه</span>
+                <h1>نحن نحلم بالغد.. لكن الغد لا يأتي</h1>
+                <div class="meta">
+                    <div class="meta-item"><i class="fas fa-user"></i><span class="author">مريم عمار محمد</span></div>
+                    <div class="meta-item"><i class="fas fa-calendar"></i><span>2026</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <main class="article-content">
+        <div class="container"><div class="content-wrapper">
+            <div class="review-text">
+                <p>عزيزي القارئ، هل فكرت يوماً فيما تريده حقاً؟ أم أن الدرب الذي تمضي فيه حاملاً وحدتك معك مضاءٌ بشعاع شغفك؟ هل نحن حقاً نعيش الحياة التي نريدها، أم أنها فُرضت علينا، فاعتدنا الطاعة لأنها تمنحنا شعور الأمان، والعصيانُ باب إذا فُتح مَلأنا بغبار التمرد فتجنبناه؟</p>
+                <p>يعد فيلم (Dead Poets Society) عملاً كلاسيكياً ذا طابع واقعي رومانتيكي (حركة أدبية فكرية) من إخراج بيتر وير (Peter Weir) وبطولة روبن ويليامز (Robin Williams)، وروبرت شون ليونارد (Robert Sean Leonard)، وإيثان هوك (Ethan Hawke).</p>
+                <p>وعلى عكس ما يعتقده الكثيرون، فإن هذا العمل لم يكن مقتبساً من رواية في الأصل، بل كُتب كسيناريو سينمائي من قبل توم شولمان (Tom Schulman)، قبل أن تتحول قصته لاحقاً إلى رواية بقلم الكاتبة كلاينباوم (N.H. Kleinbaum) بعد نجاح الفيلم.</p>
+                <p>يقدم الفيلم صورة حية للمشاعر معتمداً على التعاطف ولغة الوجوه والحوار، مما يدفعك للتأمل في أدق التفاصيل؛ في المقابل تتعمق الرواية أكثر في العوالم الداخلية للشخصيات، ليصبح لكل شخصية صوتها الخاص وصراعاتها المخفية.</p>
+                <p>يظهر الفرق في شخصية "تود"؛ إذ يركز الفيلم على تطوره الملحوظ، بينما تكشف الرواية عمق معاناته الداخلية. أما "نيل" فتبدو دوافعه في الرواية أكثر وضوحاً وعمقاً، مما يجعل قراراته أكثر إيلاماً وفهماً في الوقت نفسه.</p>
+            </div>
+            <div class="quote-box">
+                <p>يصور العمل حياة خمسة طلاب، للوهلة الأولى قد تظن أنهم عاديون، إلا أن المجتمع والمحيط قد فرضا عليهم قواعد صارمة من التقاليد، والشرف، والانضباط، والتمييز، حتى بدوا كدمى تتحرك وفق ما تمليه مثاليات المجتمع الساخرة.</p>
+            </div>
+            <div class="review-text">
+                <p>تبدأ الأحداث عند وصول معلم الأدب (جون كيتينج)، الأستاذ غير التقليدي، الذي سيضيف ألواناً زاهية إلى لوحة حياتهم الرمادية.</p>
+                <p>يلهم الطلاب لاكتشاف من هم حقاً وفهم ما يريدون، بعيداً عما رسمه أهلهم من طرق لا يهمها سوى هوس التفاخر في الوسط.</p>
+                <p>يوقظ بداخلهم الرغبة في الغوص في محيط الحياة بلا كلل، مؤمناً بأن الكلمات والأفكار قادرة على تغيير العالم، وعلى كشف الجوهر المخفي داخل الإنسان؛ لأن الجنس البشري -مهما قست عليه الحياة- يبقى مملوءاً بالعاطفة.</p>
+                <p>إن شجاعة مواجهةِ الطَموحِ قد تكون من أجمل اللحظات التي يعيشها الإنسان في حياته، وهذا ما تجلى في شخصية "نيل"، حين أخرج ما بداخله من خوف وواجهه برحابة صدر، واختار الطريق الذي أدرك أنه يمثل حقيقته.</p>
+            </div>
+            <div class="quote-box">
+                <p>لكل شيء ثمن بالتأكيد، والأحلام تصطدم بالواقع؛ إذ لم تعجب الحقيقة والده، ليكتشفَ "نيلُ" أن حياته لم تكن ملكه ولن تكون، بل كان سجيناً فيها بحكم والده.</p>
+            </div>
+            <div class="review-text">
+                <p>قرر "نيل" أن يكون القاضي أخيراً في محكمة حياته، وأن يقرر مصير جريمته التي لم تُرتكب...</p>
+                <p>يموت الإنسان مرتين في حياته: الأولى حين يُدرك أن حياته لم تكن ملكه، وأنه لم يغتنمها ليعيش ما يتمنى، والثانية حين تنتهي رحلته حقاً.</p>
+                <p>لذلك… Carpe Diem، قبل أن تدرك متأخراً أنك لم تعشها كما أردت.</p>
+            </div>
+            <div class="quote-box">
+                <p>نحن نحلم بالغد.. لكن الغد لا يأتي. نحن نحلم بالمجد.. الذي في الحقيقة لا نريده.</p>
+            </div>
+            <div class="editor-credit">
+                <i class="fas fa-check-circle"></i>
+                <span>تدقيق:</span>
+                <span class="editor-name">حيدر المرتضى</span>
+            </div>
+        </div></div>
+    </main>
+    <footer class="footer"><div class="container"><p>جميع الحقوق محفوظة لبيورم 2026</p></div></footer>
+</body>
+</html>

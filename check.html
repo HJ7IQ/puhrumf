@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>شهادات بلا ممارسة - puhrum</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <style>
+        :root { --primary: #000000; --secondary: #931916; --gray: #64748b; --gray-light: #f1f5f9; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'IBM Plex Sans Arabic', sans-serif; line-height: 1.9; color: #1e293b; background: #f8fafc; }
+        a { text-decoration: none; color: inherit; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        .header { background: rgba(255,255,255,0.98); backdrop-filter: blur(20px); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid rgba(0,0,0,0.06); padding: 1rem 0; }
+        .header .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo h1 a { color: var(--primary); font-weight: 800; font-size: 1.9rem; }
+        .logo h1 a span { color: var(--secondary); }
+        .back-btn { display: inline-flex; align-items: center; gap: 0.6rem; color: var(--secondary); font-weight: 600; padding: 0.7rem 1.6rem; border-radius: 50px; background: rgba(147,25,22,0.08); transition: all 0.3s ease; }
+        .back-btn:hover { background: var(--secondary); color: white; transform: translateY(-2px); box-shadow: 0 8px 25px rgba(147,25,22,0.3); }
+        .article-hero { background: linear-gradient(135deg, var(--primary) 0%, #1a1a1a 100%); padding: 4rem 0; text-align: center; position: relative; overflow: hidden; }
+        .article-hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at 20% 80%, rgba(147,25,22,0.4) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255,255,255,0.05) 0%, transparent 40%); }
+        .article-hero::after { content: ''; position: absolute; top: -40%; right: -15%; width: 500px; height: 500px; border: 1px solid rgba(255,255,255,0.08); border-radius: 50%; animation: float 10s ease-in-out infinite; }
+        @keyframes float { 0%,100% { transform: translate(0,0) rotate(0deg); } 50% { transform: translate(-25px,25px) rotate(8deg); } }
+        .hero-content { position: relative; z-index: 2; }
+        .category-badge { display: inline-block; background: var(--secondary); color: white; padding: 0.5rem 1.5rem; border-radius: 50px; font-size: 0.85rem; font-weight: 600; margin-bottom: 1.5rem; }
+        .hero-content h1 { color: #ffffff; font-size: clamp(1.4rem,5vw,2.4rem); font-weight: 800; margin-bottom: 1.8rem; line-height: 1.4; max-width: 900px; margin-left: auto; margin-right: auto; }
+        .meta { display: flex; justify-content: center; gap: 2.5rem; font-size: 1rem; color: rgba(255,255,255,0.85); flex-wrap: wrap; }
+        .meta-item { display: flex; align-items: center; gap: 0.5rem; }
+        .meta-item i { color: var(--secondary); }
+        .author { font-weight: 600; color: #fff; }
+        .article-content { padding: 4rem 0; }
+        .content-wrapper { background: white; border-radius: 24px; box-shadow: 0 0 0 1px rgba(0,0,0,0.05), 0 25px 50px -12px rgba(0,0,0,0.12); overflow: hidden; }
+        .review-text { padding: 3rem 3rem 1.5rem; font-size: 1.1rem; line-height: 2; color: #334155; text-align: justify; }
+        .review-text p { margin-bottom: 1.4rem; }
+        .quote-box { background: linear-gradient(135deg,#fefbfb,#fef3f3); border-right: 5px solid var(--secondary); padding: 1.5rem 2rem; margin: 1.5rem 3rem; border-radius: 0 16px 16px 0; }
+        .quote-box p { font-style: italic; color: var(--primary); font-size: 1.1rem; line-height: 1.9; }
+        .question-box { background: linear-gradient(135deg,#f0f9ff,#e0f2fe); border-right: 5px solid #0284c7; padding: 1.5rem 2rem; margin: 1.5rem 3rem; border-radius: 0 16px 16px 0; }
+        .question-box p { color: #075985; font-size: 1.1rem; line-height: 1.9; font-weight: 600; }
+        .art-image-wrapper { padding: 1.5rem 3rem 2.5rem; text-align: center; }
+        .art-image-wrapper img { max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+        .editor-credit { display: flex; align-items: center; justify-content: center; gap: 0.8rem; padding: 1.5rem; background: var(--gray-light); margin: 2rem 3rem; border-radius: 12px; font-size: 0.95rem; color: var(--gray); }
+        .editor-credit i { color: var(--secondary); }
+        .editor-name { font-weight: 600; color: var(--primary); }
+        .footer { background: var(--primary); color: white; text-align: center; padding: 2.5rem 0; font-weight: 600; }
+        @media (max-width: 768px) { .header .container { flex-direction: column; gap: 1rem; text-align: center; } .hero-content h1 { font-size: 1.3rem; } .meta { flex-direction: column; gap: 0.8rem; } .review-text,.quote-box,.question-box,.art-image-wrapper,.editor-credit { margin: 1.5rem 1.5rem; padding: 1.5rem; } }
+    </style>
+  </head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo"><h1><a href="home.html">puhrum</a></h1></div>
+            <a href="home.html" class="back-btn"><i class="fas fa-arrow-left"></i> العودة للرئيسية</a>
+        </div>
+    </header>
+    <section class="article-hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="category-badge"><i class="fas fa-flask"></i> تعليم</span>
+                <h1>شهادات بلا ممارسة؟ نقص المختبرات يهدد كفاءة خريجي الأقسام العلمية</h1>
+                <div class="meta">
+                    <div class="meta-item"><i class="fas fa-user"></i><span class="author">داليا ليث شفيق</span></div>
+                    <div class="meta-item"><i class="fas fa-calendar"></i><span>2026</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <main class="article-content">
+        <div class="container"><div class="content-wrapper">
+            <div class="review-text">
+                <p>من المفترض ألا يقتصر التعليم في الأقسام العلمية على المحاضرات النظرية فقط، وإنما يجب أن يعتمد بشكل أساسي على المختبرات والتطبيق العملي، بوصفها الوسيلة الأقرب لتحويل المعلومات المسموعة إلى مهارات حقيقية.</p>
+                <p>إلا أن الواقع يشير إلى وجود ضعف كبير في المختبرات العلمية في الجامعات Iraqiance من نواحٍ كثيرة، مثل الأبنية، وجودة المعدات وقلة أعدادها بالنسبة للطلاب، وحتى قلة المحاضرات العملية. فالجامعة ليست مكاناً لتلقي المعلومات فقط، بل لتأهيل الطلبة مهنياً للعمل مستقبلاً؛ فالجانب العملي في الأقسام العلمية يمثل للطلبة جسراً يصل بين الكتاب والواقع المهني.</p>
+                <p>ومن أجل معرفة حجم هذه المشكلة ومراعاتها من المسؤولين عنها، تم إجراء استبيان شمل (25) طالباً وطالبة من عدة أقسام علمية، مثل هندسة النفط والحاسبات والمدنية والطب العام وطب الأسنان والصيدلة، وضم أغلب المراحل. وكانت إجاباتهم متنوعة ولكنها أجمعت على وجود حاجة ماسة لتطوير جانب المختبرات العملية.</p>
+                <p>فعند سؤال الطلبة: "هل الجانب العملي والمختبرات بقسمكم كافيان لفهم المواد النظرية؟" كانت إجابات طلبة المجموعة الهندسية كالآتي:</p>
+                <p>قال محمد: "إنها غير كافية بسبب صغر المساحة وقلة الكادر"، أما زملاؤه فكانت إجاباتهم جميعاً تشكو من عدم كفاءة المختبرات وطريقة طرح المادة داخل الجانب التطبيقي، ونقص الأجهزة، بالإضافة إلى الاكتظاظ الطلابي الكبير في المختبرات الذي يمنع الأغلبية من فهم المادة بشكل مناسب.</p>
+                <p>والأعداد الكثيرة والازدحام يشكو منهما أيضاً طلاب المجموعة الطبية؛ حيث يقول علي أن المختبرات تفتقد إلى نظام المجموعات الصغيرة (Small Groups)، أي مجاميع يكون بها عدد قليل من الطلبة لدراسة المواد العلمية مجموعة تلو الأخرى، والتي من خلالها يطبقون ما تعلموه نظرياً.</p>
+                <p>ويوضح Hussein، وهو طالب صيدلة في المرحلة الثالثة، أن القلة من المواد تكون مختبراتها ملبية للاحتياجات، إلا أن الأغلبية لا تكون حتى قريبة من بلوغ تلك الغاية، لكون المواد النظرية غير مترابطة بأي شكل من الأشكال مع محتوى المواد العملية، أو أن مواد العملي في بعض الأحيان تكون إعادة مختصرة للمواد النظرية بدون إضافة أي تفصيل يجعلها مادة عملية بالمعنى الحقيقي.</p>
+            </div>
+            <div class="question-box">
+                <p>عند سؤالهم هل التعاون بين الأقسام أو العمل على مشاريع مشتركة يمكن أن يحسن الجانب العملي؟</p>
+            </div>
+            <div class="review-text">
+                <p>أجاب سجاد، وهو طالب هندسة نفط: "نعم، يمكن أن يحسنه؛ فمثلاً التعاون بين قسم هندسة النفط والهندسة الكيمياوية أو الميكانيك سيطور الجانب العملي بشكل أفضل".</p>
+                <p>وإضاف مصطفى، وهو طالب طب عام: "بنسبة 100%، أي نشاط سواء أكان صفياً أو لا صفياً يساعد القسم، ولا سيما نظام المجموعات الصغيرة (small groups)".</p>
+                <p>أما بعض الطلبة فيجدون أنه غير مهم، ويرون أنه إن كانت هناك بعض أوجه التشابه بين الأقسام فيمكن الاستغناء عنها لأن أثرها قليل. وقد تنوعت الإجابات بين المؤيد بنسبة 70% والمعارض بنسبة 30% من طلاب المجموعتين الطبية والهندسية.</p>
+            </div>
+            <div class="question-box">
+                <p>عند سؤالهم هل الأجهزة والمعدات في المختبرات كافية أم أنها تعاني من نقص أو عطل؟</p>
+            </div>
+            <div class="review-text">
+                <p>فهنا نجد الشكوى الكبرى؛ حيث أن جميع الطلاب والطالبات أجمعوا على وجود نقص كبير في المعدات والأجهزة، وأن أغلبها غير صالحة للعمل، واشتكى بعضهم من نظافة المختبرات والأجهزة، وخاصة طلاب طب الأسنان.</p>
+                <p>واتفق أغلب الطلاب على أن الأجهزة قديمة، والأقلية منهم يقولون إنها حديثة لكنها غير كافية لجميع الطلاب.</p>
+                <p>ويشكو طلاب علوم وهندسة الحاسبات من أن الحواسيب -المفترض تطبيق المادة العملية- عليها عاطلة وغير صالحة للاستخدام، وطلاب الهندسة يشكو بعضهم من أنها لا تستوفي المتطلبات وغير محاكية لبيئة العمل الحقيقية، بينما يشكو آخرون من عدم توفر الكهرباء أصلاً لتشغيل هذه الأجهزة.</p>
+                <p>إننا هنا أمام مشكلة كبيرة، وهي عدم توفر المعدات الكافية لتغطية أعداد الطلبة، ويقابل هذا كله عدم توافر الكهرباء بشكل مستمر في المختبرات. بالإضافة إلى أن بعض الأجهزة قديمة وغير مستخدمة في سوق العمل في الوقت الحاضر؛ حيث تقول سبأ بكل صراحة: "الأجهزة قديمة وحالتها سيئة، والأدوات غير كافية، بحيث لا تكفينا في بعض الأحيان لإجراء التجربة بشكلها الصحيح".</p>
+            </div>
+            <div class="review-text">
+                <p>وعند سؤالهم هل الجانب العملي يساعدهم بعد التخرج وفي بيئة العمل؟</p>
+                <p>رأى عدد كبير من الطلاب أن فائدته الحالية محدودة بسبب المشاكل التي ذُكرت سابقاً، وأوضحوا أنهم بمجرد تخرجهم قد يجدون أنفسهم في منافسة مع أشخاص سبق لهم الانخراط في سوق العمل واكتساب خبرة عملية؛ وذلك لأن الكثير من جهات التوظيف تبحث عن المهارة العملية التي لا يوفرها الجانب الأكاديمي العملي الحالي بسبب ضعفه وضيق وقته الذي لا يكفي لتعلم الطلاب بالكامل.</p>
+                <p>يضاف إلى ذلك كثرة العطل الرسمية، مما يزيد من تعقيد المشكلة، وبالنتيجة تظهر فجوة واضحة بين الخريجين ومتطلبات سوق العمل.</p>
+            </div>
+            <div class="question-box">
+                <p>عند سؤال الطلاب حول الحلول أو المقترحات التي يمكن أن تطور الجانب العملي في أقسامهم؟</p>
+            </div>
+            <div class="review-text">
+                <p>أظهرت الإجابات وعياً واضحاً بالمشكلة وواقعية في طرح الحلول، وأن أولئك الطلبة يستحقون لفتة جادة تحسن من حال المختبرات لتهيئتهم بالشكل الصحيح لبيئة العمل والنهوض باقتصاد الوطن.</p>
+                <p>حيث اتفق الطلاب أجمعون على ضرورة تحديث المعدات، وتوفير كادر متخصص لصيانة الأجهزة دورياً والإشراف عليها وعلى نظافتها وكفاءة عملها. وبهذه الحالة ستُحل مشكلتان: الأولى مشكلة الطلاب الأكاديمية التي أوضِحت في الأسئلة السابقة، والثانية مشكلة البطالة عبر توظيف الخريجين كفنيين أو ميكانيكيين للإشراف على تلك المختبرات والمعدات.</p>
+                <p>وأيضاً طالبوا بأن تكون التجارب العلمية حقيقية تراعي بيئة العمل الحقيقية، وأن يكون هناك توافق تام بين المواد العملية والنظرية، وأن تُجرى امتحانات المواد العملية بشكل عملي لا نظري.</p>
+                <p>وناشد بعضهم بتحديث المناهج لتواكب التطور الحاصل بمختلف المجالات؛ حيث أوضح Hussein (طالب صيدلة) أن الجانب العملي يجب أن يُؤخذ بجدية أكبر، ومن المفترض أن ننظر إليه كبيئة تعليمية مليئة بالفرص والمهارات التي يُمكن أن تُكتسب وتُطوَّر بدلاً من أن نراه مجرد ملازم تُدرس وقت الامتحان.</p>
+                <p>كما طالبوا بزيادة الوقت المخصص حتى تأخذَ كل تجربة حقها بالفهم، وتطبيق نظام المجموعات الصغيرة، ويرى بعضهم أن زيادة التدريب الميداني يُعد حلاً من الحلول التي تطور الجانب العملي.</p>
+            </div>
+            <div class="question-box">
+                <p>الآن أسألُ: ماذا لو تحسنت المختبرات بنسبة 90% من الآن؟ علامَ سيؤثر ذلك على الطلاب أكاديمياً وعلى الخريجين عملياً؟</p>
+            </div>
+            <div class="review-text">
+                <p>تشير الدراسات التربوية إلى أن التعليم العملي يرفع مستوى الاستيعاب والاحتفاظ بالمعلومة مقارنة بالتعليم النظري فقط، كما أنه يزيد من جاهزية الخريجين لسوق العمل.</p>
+                <p>إن تحسين المختبرات لن ينعكس فقط على رضا الطلاب، بل أيضاً على جودة بحوث التخرج لطلبة البكالوريوس وبحوث طلبة الدراسات العليا؛ لأنها ستزيد من تحصيلهم العلمي بنسبة كبيرة.</p>
+                <p>تخيلوا جيلاً كاملاً من الطلبة يفهم ما يدرسه بعمق لأنه تدرب عليه عملياً داخل مختبرات حديثة ومتكاملة؛ ستُخرج جامعتنا العريقة طلبة بجاهزية عالية، وتكون الجامعة قادرة على الارتقاء والمنافسة دولياً بفضل رصانة البحوث التي يقدمها طلابها  فتحسين المختبرات سينعكس أولاً على الجامعة وثانياً على طلابها وجودة أبحاثهم.
+.</p>
+            </div>
+
+
+                        <div class="review-text">
+                            <p>            ​ففي دراسة (Does the use of videos in flipped classrooms in Engineering labs improve student performance) التي نُشرت في مجلة (Education Sciences) عام 2022، وأجرتها جامعة "لاس بالماس دي غران كناريا" في إسبانيا مستهدفةً طلاب الهندسة،
+</p>
+<p> وُجد أن تطوير التعليم العملي داخل المختبر واستخدام وسائل حديثة حسّن من أداء الطلاب وزاد من تفاعلهم ومهاراتهم العلمية. كما أجرت جامعة "تشجيانغ" في الصين دراسة عنوانها (Incorporating modified team-based learning into a flipped basic medical laboratory course: impact on student performance and perceptions) مستهدفةً طلاب الطب الذين كان عددهم 408، أثبتت فيها أن التعليم العملي المعتمد على الفرق يمنح فهماً أعمق للمادة وشعوراً ببيئة تعليمية أفضل. وهناك دراسات أخرى في دول مختلفة أثبتت جميعها أهمية التعليم العملي على فهم الطلاب للمادة الأكاديمية، وفعاليته في إعدادهم لسوق العمل.
+​وعليه، يطمح طلاب جامعتنا إلى تحسين المختبرات لأجل رفع التحصيل الدراسي، وأن تُفهم المادة بشكل أكثر سلاسة، وتحسين جودة البحوث العلمية لطلبة الدراسات العليا، واكتساب ثقة أعلى بالنفس عند التوظيف.
+وتشير نقاشات أكاديمية مؤخراً إلى أن التحدي في الجامعات العراقية لا يقتصر على نقص المختبرات، بل يمتد إلى جودة البيئة البحثية نفسها، حيث ترتبط قوة البحث العلمي بوجود مختبرات حديثة وتدريب منهجي رصين؛ إذ إن الضعف الذي يجده الطالب اليوم في المختبرات لا ينعكس عليه فقط، بل على جودة الإنتاج العلمي ومستوى الجامعات أيضاً.
+فالمختبرات القوية لا تصنع طالباً أفضل فحسب، بل تصنع جامعة أقوى وسمعة بحثية أرفع، وهذا ما يطمح إليه الطلاب في جامعة البصرة العريقة للارتقاء بها نحو القمة حيث تستحق.
+</p>
+</div>
+  <div class="art-image-wrapper">
+                <img src="photo/ch.png" alt="Student Dev Kit H 1.0">
+            </div>
+            <div class="editor-credit">
+                <i class="fas fa-check-circle"></i>
+                <span>تدقيق:</span>
+                <span class="editor-name">حيدر المرتضى</span>
+            </div>
+        </div></div>
+    </main>
+    <footer class="footer"><div class="container"><p>جميع الحقوق محفوظة لبيورم 2026</p></div></footer>
+</body>
+</html>
+
+
+
+
+            

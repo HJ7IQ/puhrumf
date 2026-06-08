@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>قصة قصيرة - puhrum</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <style>
+        :root { --primary: #000000; --secondary: #931916; --gray: #64748b; --gray-light: #f1f5f9; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'IBM Plex Sans Arabic', sans-serif; line-height: 1.9; color: #1e293b; background: #f8fafc; }
+        a { text-decoration: none; color: inherit; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        .header { background: rgba(255,255,255,0.98); backdrop-filter: blur(20px); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid rgba(0,0,0,0.06); padding: 1rem 0; }
+        .header .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo h1 a { color: var(--primary); font-weight: 800; font-size: 1.9rem; }
+        .logo h1 a span { color: var(--secondary); }
+        .back-btn { display: inline-flex; align-items: center; gap: 0.6rem; color: var(--secondary); font-weight: 600; padding: 0.7rem 1.6rem; border-radius: 50px; background: rgba(147,25,22,0.08); transition: all 0.3s ease; }
+        .back-btn:hover { background: var(--secondary); color: white; transform: translateY(-2px); box-shadow: 0 8px 25px rgba(147,25,22,0.3); }
+        .article-hero { background: linear-gradient(135deg, var(--primary) 0%, #1a1a1a 100%); padding: 4rem 0; text-align: center; position: relative; overflow: hidden; }
+        .article-hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at 20% 80%, rgba(147,25,22,0.4) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255,255,255,0.05) 0%, transparent 40%); }
+        .article-hero::after { content: ''; position: absolute; top: -40%; right: -15%; width: 500px; height: 500px; border: 1px solid rgba(255,255,255,0.08); border-radius: 50%; animation: float 10s ease-in-out infinite; }
+        @keyframes float { 0%,100% { transform: translate(0,0) rotate(0deg); } 50% { transform: translate(-25px,25px) rotate(8deg); } }
+        .hero-content { position: relative; z-index: 2; }
+        .category-badge { display: inline-block; background: var(--secondary); color: white; padding: 0.5rem 1.5rem; border-radius: 50px; font-size: 0.85rem; font-weight: 600; margin-bottom: 1.5rem; }
+        .hero-content h1 { color: #ffffff; font-size: clamp(1.6rem,5vw,2.6rem); font-weight: 800; margin-bottom: 1.8rem; line-height: 1.4; max-width: 900px; margin-left: auto; margin-right: auto; }
+        .meta { display: flex; justify-content: center; gap: 2.5rem; font-size: 1rem; color: rgba(255,255,255,0.85); flex-wrap: wrap; }
+        .meta-item { display: flex; align-items: center; gap: 0.5rem; }
+        .meta-item i { color: var(--secondary); }
+        .author { font-weight: 600; color: #fff; }
+        .article-content { padding: 4rem 0; }
+        .content-wrapper { background: white; border-radius: 24px; box-shadow: 0 0 0 1px rgba(0,0,0,0.05), 0 25px 50px -12px rgba(0,0,0,0.12); overflow: hidden; }
+        .story-text { padding: 3rem 3rem 1.5rem; font-size: 1.15rem; line-height: 2.1; color: #334155; text-align: justify; }
+        .story-text p { margin-bottom: 1.5rem; }
+        .story-text p:last-child { margin-bottom: 0; }
+        .poem-box { background: linear-gradient(135deg,#fefbfb,#fef3f3); border-right: 5px solid var(--secondary); padding: 2rem; margin: 1.5rem 3rem; border-radius: 0 16px 16px 0; font-size: 1.15rem; line-height: 2; color: var(--primary); text-align: center; }
+        .poem-box p { margin-bottom: 1rem; }
+        .poem-box .verse { font-weight: 600; margin-bottom: 0.5rem; }
+        .poem-box .meaning { font-size: 0.95rem; color: var(--gray); font-style: italic; }
+        .art-image-wrapper { padding: 1.5rem 3rem 2.5rem; text-align: center; }
+        .art-image-wrapper img { max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+        .editor-credit { display: flex; align-items: center; justify-content: center; gap: 0.8rem; padding: 1.5rem; background: var(--gray-light); margin: 2rem 3rem; border-radius: 12px; font-size: 0.95rem; color: var(--gray); }
+        .editor-credit i { color: var(--secondary); }
+        .editor-name { font-weight: 600; color: var(--primary); }
+        .footer { background: var(--primary); color: white; text-align: center; padding: 2.5rem 0; font-weight: 600; }
+        @media (max-width: 768px) { .header .container { flex-direction: column; gap: 1rem; text-align: center; } .hero-content h1 { font-size: 1.5rem; } .meta { flex-direction: column; gap: 0.8rem; } .story-text,.poem-box,.art-image-wrapper,.editor-credit { margin: 1.5rem 1.5rem; padding: 1.5rem; } }
+    </style>
+  </head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo"><h1><a href="home.html">puhrum</a></h1></div>
+            <a href="home.html" class="back-btn"><i class="fas fa-arrow-left"></i> العودة للرئيسية</a>
+        </div>
+    </header>
+    <section class="article-hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="category-badge"><i class="fas fa-book-open"></i> قصة قصيرة</span>
+                <h1>قصة قصيرة</h1>
+                <div class="meta">
+                    <div class="meta-item"><i class="fas fa-user"></i><span class="author">مصطفى حازم</span></div>
+                    <div class="meta-item"><i class="fas fa-calendar"></i><span>2026</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <main class="article-content">
+        <div class="container"><div class="content-wrapper">
+            <div class="story-text">
+                <p>يحكى أن جماعةً من الأعراب كانوا يطاردون أنثى ضبع تعرضت طريقهم، وكانت العرب في سالف عهودهم يُكنّون أنثى الضبع بأم عامرٍ، فادبرت هاربةً منهم ولجأت إلى بيت أحد الأعراب مستنجدة به.</p>
+                <p>فلما رآها واهنةٍ، خائرة القوى وقد أنهكها حر القيظ وأضناها العطش، خرج شاهرا سيفه في وجه الأعراب وسأل : ما شأنكم؟</p>
+                <p>قالوا : طريدتنا ونريدها</p>
+                <p>قال : إنها أصبحَت في جواري، ولن تصلوا لها ما دام هذا السيف بيدي</p>
+                <p>فاعرضوا عنه وانصرفوا.</p>
+                <p>فحدق بأم عامر فإذا بها جائعة، فحلب نعجته وسقاها، وما أن تجرعت الحليب حتى ارتدت عافيتها.</p>
+                <p>ومع دخول الليل نام الأعرابي فرحاً بما قدمه من إحسان لإنثى الضبع، وما أن غفا حتى وثبت عليه وبقرت بطنه، وشربت من دمه، وتركته وسارت عنه.</p>
+                <p>وفي صباح اليوم التالي، أقبل ابن عم الأعرابي قاصدا بيته، فوجده مقتولا غارقا بدمائه، فعرف أنها أنثى الضبع فتتبع أثرها وأرداها قتيلة بسهمه.</p>
+                <p>فأنشد أبيات مرثياً بها ابن عمه :</p>
+            </div>
+            <div class="poem-box">
+                <p class="verse">ومن يصنع المعروفَ في غير أهله ِ</p>
+                <p class="meaning">— "من يصنع الخير بمن لا يستحقه يلقى جزاءً مثل هذا"</p>
+                <p class="verse">يلاقي الذي لاقى مجيرُ أمِّ عامرِ</p>
+                <p class="meaning">— "يستقبل نفس ما استقبله مُجيرُ أم عامر"</p>
+                <p class="verse">أدام لها حين استجارت بقربه</p>
+                <p class="meaning">— "أطعمها وسقاها حين جاءت إليه"</p>
+                <p class="verse">طعاماً وألبان اللقا ح الدرائرِ</p>
+                <p class="meaning">— "طعاما وألباناً من غنمه"</p>
+                <p class="verse">وسمنها حتى إذا ما تكاملت</p>
+                <p class="meaning">— "أطعمها حتى سمنت واستعادت قوتها"</p>
+                <p class="verse">فرَّتْهُ بأنيابٍ لها وأظافر</p>
+                <p class="meaning">— "لكنها هربت منه بأسنانها ومخالبها"</p>
+                <p class="verse">فقل لذوي المعروفِ هذا جزاء من</p>
+                <p class="meaning">— "فقل لأهل المعروف: هذا جزاء من يفعل الخير"</p>
+                <p class="verse">يصنع المعروفَ في غير شاكرِ</p>
+                <p class="meaning">— "لمن لا يستحقه أو يشكره"</p>
+            </div>
+            <div class="story-text">
+                <p>وقائع هذه الحكاية تُجسّد مبدأً عربياً قديماً : "ومن يصنع المعروفَ في غير أهلهِ"، أي أن الإحسان لا ينبغي أن يُبذَل إلا لمن يستحقه ويشكره، فليس كل قلبٍ يستحق العطف، وليس كل يد تقبض على الإحسان لتقبض صاحبه.</p>
+            </div>
+            <div class="art-image-wrapper">
+                <img src="photo/sh.png" alt="قصة قصيرة">
+            </div>
+            <div class="editor-credit">
+                <i class="fas fa-check-circle"></i>
+                <span>تدقيق:</span>
+                <span class="editor-name">دانة حسام</span>
+            </div>
+        </div></div>
+    </main>
+    <footer class="footer"><div class="container"><p>جميع الحقوق محفوظة لبيورم 2026</p></div></footer>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>كيف الهمتنا الطيور لصناعة الموسيقى - puhrum</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <style>
+        :root { --primary: #000000; --secondary: #931916; --gray: #64748b; --gray-light: #f1f5f9; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'IBM Plex Sans Arabic', sans-serif; line-height: 1.9; color: #1e293b; background: #f8fafc; }
+        a { text-decoration: none; color: inherit; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        .header { background: rgba(255,255,255,0.98); backdrop-filter: blur(20px); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid rgba(0,0,0,0.06); padding: 1rem 0; }
+        .header .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo h1 a { color: var(--primary); font-weight: 800; font-size: 1.9rem; }
+        .logo h1 a span { color: var(--secondary); }
+        .back-btn { display: inline-flex; align-items: center; gap: 0.6rem; color: var(--secondary); font-weight: 600; padding: 0.7rem 1.6rem; border-radius: 50px; background: rgba(147,25,22,0.08); transition: all 0.3s ease; }
+        .back-btn:hover { background: var(--secondary); color: white; transform: translateY(-2px); box-shadow: 0 8px 25px rgba(147,25,22,0.3); }
+        .article-hero { background: linear-gradient(135deg, var(--primary) 0%, #1a1a1a 100%); padding: 4rem 0; text-align: center; position: relative; overflow: hidden; }
+        .article-hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at 20% 80%, rgba(147,25,22,0.4) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255,255,255,0.05) 0%, transparent 40%); }
+        .article-hero::after { content: ''; position: absolute; top: -40%; right: -15%; width: 500px; height: 500px; border: 1px solid rgba(255,255,255,0.08); border-radius: 50%; animation: float 10s ease-in-out infinite; }
+        @keyframes float { 0%,100% { transform: translate(0,0) rotate(0deg); } 50% { transform: translate(-25px,25px) rotate(8deg); } }
+        .hero-content { position: relative; z-index: 2; }
+        .category-badge { display: inline-block; background: var(--secondary); color: white; padding: 0.5rem 1.5rem; border-radius: 50px; font-size: 0.85rem; font-weight: 600; margin-bottom: 1.5rem; }
+        .hero-content h1 { color: #ffffff; font-size: clamp(1.4rem,5vw,2.4rem); font-weight: 800; margin-bottom: 1.8rem; line-height: 1.4; max-width: 900px; margin-left: auto; margin-right: auto; }
+        .meta { display: flex; justify-content: center; gap: 2.5rem; font-size: 1rem; color: rgba(255,255,255,0.85); flex-wrap: wrap; }
+        .meta-item { display: flex; align-items: center; gap: 0.5rem; }
+        .meta-item i { color: var(--secondary); }
+        .author { font-weight: 600; color: #fff; }
+        .article-content { padding: 4rem 0; }
+        .content-wrapper { background: white; border-radius: 24px; box-shadow: 0 0 0 1px rgba(0,0,0,0.05), 0 25px 50px -12px rgba(0,0,0,0.12); overflow: hidden; }
+        .review-text { padding: 3rem 3rem 1.5rem; font-size: 1.1rem; line-height: 2; color: #334155; text-align: justify; }
+        .review-text p { margin-bottom: 1.4rem; }
+        .quote-box { background: linear-gradient(135deg,#fefbfb,#fef3f3); border-right: 5px solid var(--secondary); padding: 1.5rem 2rem; margin: 1.5rem 3rem; border-radius: 0 16px 16px 0; }
+        .quote-box p { font-style: italic; color: var(--primary); font-size: 1.1rem; line-height: 1.9; }
+        .list-box { padding: 1rem 3rem; margin: 1rem 3rem; }
+        .list-box h3 { color: var(--primary); font-size: 1.1rem; margin-bottom: 1rem; }
+        .list-box ol { padding-right: 1.5rem; color: #334155; line-height: 2; }
+        .list-box li { margin-bottom: 0.8rem; }
+        .list-box li strong { color: var(--secondary); }
+        .art-image-wrapper { padding: 1.5rem 3rem 2.5rem; text-align: center; }
+        .art-image-wrapper img { max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+        .editor-credit { display: flex; align-items: center; justify-content: center; gap: 0.8rem; padding: 1.5rem; background: var(--gray-light); margin: 2rem 3rem; border-radius: 12px; font-size: 0.95rem; color: var(--gray); }
+        .editor-credit i { color: var(--secondary); }
+        .editor-name { font-weight: 600; color: var(--primary); }
+        .footer { background: var(--primary); color: white; text-align: center; padding: 2.5rem 0; font-weight: 600; }
+        @media (max-width: 768px) { .header .container { flex-direction: column; gap: 1rem; text-align: center; } .hero-content h1 { font-size: 1.3rem; } .meta { flex-direction: column; gap: 0.8rem; } .review-text,.quote-box,.list-box,.art-image-wrapper,.editor-credit { margin: 1.5rem 1.5rem; padding: 1.5rem; } }
+    </style>
+  </head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo"><h1><a href="home.html">puhrum</a></h1></div>
+            <a href="home.html" class="back-btn"><i class="fas fa-arrow-left"></i> العودة للرئيسية</a>
+        </div>
+    </header>
+    <section class="article-hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="category-badge"><i class="fas fa-music"></i> ثقافة</span>
+                <h1>كيف الهمتنا الطيور لصناعة الموسيقى؟</h1>
+                <div class="meta">
+                    <div class="meta-item"><i class="fas fa-user"></i><span class="author">محمد احمد عبدعلي</span></div>
+                    <div class="meta-item"><i class="fas fa-calendar"></i><span>2026</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <main class="article-content">
+        <div class="container"><div class="content-wrapper">
+            <div class="review-text">
+                <p>في البدء كان الصمتُ المطبقٌ، وحين دبت الحركةٌ في الفراغِ، نشأ الصوتُ وانتشر في الأرجاء، ثم ظهرت الحياةُ على سطحِ الأرضِ، وبظهورها جَرَتِ الأنهارُ وزقزقت الطيورُ ومشت الحيوانات على الأرضِ، ولكن لم يكن لكلِّ هذا معنىً حتى ظهر الإنسان إلى الواجهة، وبدأ بملاحظةِ هذه الأصوات، وأخذ يؤِّلفُ منها في مخيلتهِ، وراح يخلق أنماطاً جديدةً باستعمالِ ما حوله من أشياءٍ مصدراً أصواتاً مختلفةً، كأن يمشي بإيقاع معين، أو يضرب حجرين ببعضهما البعض، وبتطورهِ عبر السنين راح يحاكي الأصوات من حوله محاولاً تقليدها؛ فبدأ بالغناء والصفيرِ، واللذين استخدمهما للتواصلِ والتعبيرِ عما يختلجُهُ من مشاعر وأحاسيس.</p>
+                <p>لكن ما الذي دعا الإنسانَ للاهتمامِ بمثل هذا الشيءِ الغريبِ الذي نسميه اليوم (موسيقى)، بل وتطويره للحدِّ الذي وصل إليه اليوم؟</p>
+                <p>في الحقيقة، لا يوجد تصور واضح ومكتمل الأركان حول السبب الدقيق لنشوء الموسيقى، ولكن هناك عدة نظريات علمية تعطي تفسيراً لسبب نشوئها؛ إذ يرى معظم علماء التاريخ والأحياء أن للموسيقى أثراً كبيراً ومهماً في تطورِ الإنسان. فوفقاً لفرضية الترابط الاجتماعي (Social Bonding Hypothesis)، كان بقاء أسلافنا في العصور القديمة يعتمد على وجودهم في مجموعات تضمن لهم حمايتهم وتأمين قوت يومهم، وكانت الموسيقى والرقص من أهم ما يوحدهم في مجموعاتهم هذه، فيؤولون إلى جسد واحد تحت أنغام موسيقاهم، مما انعكسَ بالإيجابِ على أفراد القبيلة ككل وتطورت صلاتهم الاجتماعية ببعضهم البعض. فحينَ يرقصُ البشرُ في مجموعاتٍ ويغنون أغانيهم، تفرز أدمغتهم كميةً كبيرةً من "الأوكسيتوسين" (Oxytocin) و"الإندورفين" (Endorphins)، وهي ناقلات عصبية ينتجها الدماغ، وتساهم في تقوية الروابط الاجتماعية بين الأفراد.</p>
+                <p>كما كان للموسيقى أهمية كبيرة في الطقوس الدينية والروحية، فلم تكن طقساً اجتماعياً فحسب، بل كانت ذات أهميةٍ روحيةٍ ووجدانيةٍ كبيرة؛ مثل الممارسات الشامانية، وهي نظام من الممارسات الدينية يعتمد على السحرِ والشعوذة، ظهرت في مجتمعات الصيد وجمع الثمار في سيبيريا وآسيا الوسطى والأمريكيتين. تهدف ممارساتهم بشكل أساسي إلى علاج المرضى، فالشامان (الساحر) هو شخصٌ لهُ القدرة على التواصل مع الأرواح والعالم الآخر، فكانوا ينجزون أمورهم عن طريقِ جلسات تحضير الأرواح التي تعتمد على ممارسةِ طقوس متنوعة مثل قرعِ الطبولِ والغناء بإيقاع منتظم، يهدفُ إلى إدخالِ الفردِ أو الجماعة في حالةٍ من الوجدِ والانفصالِ عن العالمِ الماديِّ والتواصل مع العالم الآخر بغيةَ طلبِ الشفاء أو طلباً للمطرِ أو لتوفيقهم في الصيدِ.</p>
+            </div>
+            <div class="quote-box">
+                <p>بدأَ الإنسانُ محاولاتِه الأولى لصنعِ الموسيقى عن طريقِ محاكاةِ بيئتهِ المحيطةِ به كأصواتِ الطيورِ، وبدأَ أولاً باستكشافِ جسدهِ فراح يقفزُ بإيقاعٍ معينٍ، وراحَ يضربُ الأحجارَ ببعضها ويلاحظُ أصواتها المتنوعة عند استعمال أنواع مختلفة من الأحجار، وتارةً يهمهمُ باستخدامِ حبالهِ الصوتية، فينتج أصواتاً مميزةً، وهو ما تطورَ لاحقاً ليكون لوناً غنائياً قائماً بذاته إلى اليوم ألا وهو "الترانيم".</p>
+            </div>
+            <div class="review-text">
+                <p>وبتطورهِ أكثر عبر الزمن، اخترعَ أدواتٍ تسهل عليهِ حياته وتعينُه فيها وتسدُّ حاجاتِ يومه، ومنها أقواسُ الصيدِ، التي حين استخدمها لاحظَ صوتها المميزَ عندَ جذبِ وترِ القوسِ وإطلاقِهِ للسهام، وهو ما يُعتقد كونُه البذرةَ الأولى ومصدرَ الإلهامِ لاختراع الآلات الوترية لاحقاً كالقيثارة مثلاً، أو الجلود المجففة المشدودة على أوعيةٍ فخاريةٍ وما تنتجه من صوتٍ عالٍ استخدموه سابقاً لإرسالِ إشاراتٍ بعيدةٍ كنوعٍ من التواصلِ. وبمرورِ الوقتِ راحوا يصنعون آلاتهم الموسيقية مما يتوافر لديهم من مواد وجدوها في بيئاتهم، كصناعة الآلات النفخية مثل المزامير المصنوعة من عظام الحيوانات، والتي تعتبر من أقدم الآلات الموسيقية المعروفة، والتي تدلُ بشكلٍ واضحٍ على الاهتمام الشديد عندَ البشرِ البدائيين بالموسيقى، ومنها:</p>
+            </div>
+            <div class="list-box">
+                <ol>
+                    <li><strong>مزمار كهف ديفجي بابي:</strong> مزمار عظمي مصنوع من عظم فخذِ دبٍ، اكتُشِفَ عام 1995 في شمال سلوفينيا في حديقة "ديفجي بابي (Divje Babe)"، ويُعتقد أنه صُنِعَ على يد إنسانِ النياندرتال قبل أكثر من 43,000 سنة، ويعد أقدم آلة موسيقية اكتشفت حتى الآن.</li>
+                    <li><strong>مزامير كهف غايسنكلوسترلي:</strong> وجدت في ألمانيا في كهف "غايسنكلوسترلي (Geißenklösterle)"، وهي مصنوعة من عظام النسور وعاج الماموث، وتعود لنفس الحقبة الزمنية، أي قبل حوالي 43,000 عام.</li>
+                    <li><strong>مزمار كهف هول فيلز:</strong> اكتُشِفَ في كهوف ألمانيا أيضاً، ولكن في فترةٍ أحدث نسبياً (حوالي قبل 34,000 عام)، وما يميزه هو شبهه الكبير بالمزامير الحالية من حيث الطولِ والشكلِ، إذ يبلغ طوله حوالي (22cm) مع فتحةٍ مُضَيَّقةٍ للنفخِ، وهو مايشبه المزامير الحالية بشكلٍ واضح.</li>
+                    <li><strong>الليثوفونات (Lithophones):</strong> وهي أحجار متنوعةُ مختارةٌ بعناية ومنحوتةٌ ومرتبةٌ بشكلٍ أفقي، تشبه إلى حدٍ كبير آلة "الزيلوفون (Xylophone)"، الصادرِ عندَ الضربِ عليها أنغاماً متنوعةً، اكتشفتْ في فيتنام وتعود لحوالي 11,000 عام.</li>
+                </ol>
+            </div>
+            <div class="quote-box">
+                <p>لم تكن الموسيقى يوماً بعيدةً عن حياتنا نحن البشر، فهي ترافقنا منذُ ظهورنا على الأرضِ وفي كلِّ شيءٍ في حياتنا، فكل ما حولنا موسيقى إذ هي لغةُ الكونِ، لغةُ الطبيعةِ، لغة كلِّ ما حولنا، فنحنُ مجبولونَ عليها؛ تنفذُ إلى أعماقِ روحنا ووجداننا، وبها نفهمُ أنفسنا ونندمجُ مع العالمِ من حولنا، فهي لغةُ العالمِ منذُ نشأتهِ تطورتْ بتطورِه وواكبته بتطورِ الآلات الموسيقية، فكانت شاهدةً على عصرها، تعكسُ جزءً كبيراً من الثقافةِ التي أنتجتها، فهي جزءٌ لا يتجزأ من الإرثِ والنتاج البشري.</p>
+            </div>
+            <div class="art-image-wrapper">
+                <img src="photo/song.png" alt="آلات موسيقية قديمة">
+            </div>
+            <div class="editor-credit">
+                <i class="fas fa-check-circle"></i>
+                <span>تدقيق:</span>
+                <span class="editor-name">حيدر المرتضى</span>
+            </div>
+        </div></div>
+    </main>
+    <footer class="footer"><div class="container"><p>جميع الحقوق محفوظة لبيورم 2026</p></div></footer>
+</body>
+</html>

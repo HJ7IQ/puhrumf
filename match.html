@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>فريق موظفي الجامعة إلى النهائي - puhrum</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all-min.css">
+    <style>
+        :root { --primary: #000000; --secondary: #931916; --gray: #64748b; --gray-light: #f1f5f9; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'IBM Plex Sans Arabic', sans-serif; line-height: 1.9; color: #1e293b; background: #f8fafc; }
+        a { text-decoration: none; color: inherit; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        .header { background: rgba(255,255,255,0.98); backdrop-filter: blur(20px); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid rgba(0,0,0,0.06); padding: 1rem 0; }
+        .header .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo h1 a { color: var(--primary); font-weight: 800; font-size: 1.9rem; }
+        .logo h1 a span { color: var(--secondary); }
+        .back-btn { display: inline-flex; align-items: center; gap: 0.6rem; color: var(--secondary); font-weight: 600; padding: 0.7rem 1.6rem; border-radius: 50px; background: rgba(147,25,22,0.08); transition: all 0.3s ease; }
+        .back-btn:hover { background: var(--secondary); color: white; transform: translateY(-2px); box-shadow: 0 8px 25px rgba(147,25,22,0.3); }
+        .article-hero { background: linear-gradient(135deg, var(--primary) 0%, #1a0a0a 100%); padding: 4rem 0; text-align: center; position: relative; overflow: hidden; }
+        .article-hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at 20% 80%, rgba(147,25,22,0.5) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255,255,255,0.08) 0%, transparent 40%); }
+        .article-hero::after { content: ''; position: absolute; top: -40%; right: -10%; width: 400px; height: 400px; border: 1px solid rgba(255,255,255,0.1); border-radius: 50%; animation: rotate 20s linear infinite; }
+        @keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        .hero-content { position: relative; z-index: 2; }
+        .category-badge { display: inline-block; background: var(--secondary); color: white; padding: 0.5rem 1.5rem; border-radius: 50px; font-size: 0.85rem; font-weight: 600; margin-bottom: 1.5rem; }
+        .hero-content h1 { color: #ffffff; font-size: clamp(1.5rem,5vw,2.3rem); font-weight: 800; margin-bottom: 1.8rem; line-height: 1.3; max-width: 900px; margin-left: auto; margin-right: auto; }
+        .meta { display: flex; justify-content: center; gap: 2rem; font-size: 0.95rem; color: rgba(255,255,255,0.8); flex-wrap: wrap; }
+        .meta-item { display: flex; align-items: center; gap: 0.5rem; }
+        .meta-item i { color: var(--secondary); }
+        .author { font-weight: 600; color: #fff; }
+        .article-content { padding: 3rem 0; }
+        .content-wrapper { background: white; border-radius: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); overflow: hidden; }
+        .review-text { padding: 2.5rem 3rem 1.5rem; font-size: 1.05rem; line-height: 1.9; color: #334155; text-align: justify; }
+        .review-text p { margin-bottom: 1.2rem; }
+        .quote-box { background: linear-gradient(135deg,#fef9f9,#fef2f2); border-right: 4px solid var(--secondary); padding: 1.5rem 2rem; margin: 1.5rem 3rem; border-radius: 0 12px 12px 0; }
+        .quote-box p { color: var(--primary); font-size: 1rem; line-height: 1.8; }
+        .art-image-wrapper { padding: 1rem 3rem 2rem; text-align: center; }
+        .art-image-wrapper img { max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.1); }
+        .footer { background: var(--primary); color: white; text-align: center; padding: 2rem 0; font-weight: 600; }
+        @media (max-width: 768px) { .header .container { flex-direction: column; gap: 1rem; text-align: center; } .hero-content h1 { font-size: 1.4rem; } .meta { flex-direction: column; gap: 0.6rem; } .review-text,.quote-box,.art-image-wrapper { margin: 1rem 1.5rem; padding: 1rem 1.5rem; } }
+    </style>
+  </head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo"><h1><a href="home.html">puhrum</a></h1></div>
+            <a href="home.html" class="back-btn"><i class="fas fa-arrow-right"></i> العودة</a>
+        </div>
+    </header>
+    <section class="article-hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="category-badge"><i class="fas fa-futbol"></i> أحداث</span>
+                <h1>فريق موظفي الجامعة إلى النهائي</h1>
+                <div class="meta">
+                    <div class="meta-item"><i class="fas fa-pen"></i><span>ملاك حيدر</span></div>
+                    <div class="meta-item"><i class="fas fa-calendar"></i><span>2026</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <main class="article-content">
+        <div class="container"><div class="content-wrapper">
+            <div class="review-text">
+                <p>شهد ملعب الهندسة، صباح يوم الثلاثاء 28/04/2026، مواجهةً حماسية بين فريق موظفي الجامعة وطلاب قسم هندسة النفط، في النصف النهائي من كأس العميد،</p>
+                <p>وعلى الرغم من انتهاء اللقاء بفوز الموظفين بنتيجة (2-1)، فإن مجريات المباراة لم تعكس هذا التفوق بشكل واضح.</p>
+            </div>
+            <div class="quote-box">
+                <p>أضافتْ درجات الحرارة المرتفعة في ذلك اليوم صعوبةً كبيرة على الفريقين والجمهور، لينتهي الشوط الأول بتعادل سلبي.</p>
+            </div>
+            <div class="review-text">
+                <p>ومع انطلاق الشوط الثاني، تصاعدت وتيرة الضغط والمنافسة، وكثرت الفرص الضائعة، خاصة من جانب فريق هندسة النفط الذي سعى لاختراق مرمى الموظفين.</p>
+                <p>وفي الدقائق الخمس الأخيرة، نجح النفط في تسجيل هدفٍ منح الانطباع بأن المباراة قد حُسمت لصالحه. لكن في لحظة خاطفة، أعاد فريق الموظفين التوازن بإحراز هدف التعادل، ليشعل أجواء المباراة من جديد ويعيد روح المنافسة الشرسة.</p>
+            </div>
+            <div class="quote-box">
+                <p>ويرى بعض الجماهير أن تراجع فريق النفط والمبالغة في الدفاع خلال تلك الدقائق الحاسمة منحت الموظفين جرأة أكبر للتقدم نحو مرمى الخصم.</p>
+            </div>
+            <div class="review-text">
+                <p>وفي الدقيقة الأخيرة، لجأ فريق الموظفين إلى قرار ذكي واستراتيجي بطلب استراحة لشرب الماء، ما ساهم في تخفيف الضغط واستعادة التركيز.</p>
+                <p>وجاء الحسم من ركلة ركنية استُثمرت بنجاح، أسفرت عن الهدف الثاني الذي منحهم الفوز وبطاقة التأهل إلى النهائي.</p>
+            </div>
+        </div></div>
+    </main>
+    <footer class="footer"><div class="container"><p>جميع الحقوق محفوظة لبيورم 2026</p></div></footer>
+</body>
+</html>
